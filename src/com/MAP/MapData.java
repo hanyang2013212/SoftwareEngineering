@@ -43,8 +43,5 @@ public class MapData {
         return stationTableID;
     }
 
-    @Override
-    public String toString() {
-        return "id:"+id+"";
-    }
+
 }
