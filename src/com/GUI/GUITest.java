@@ -20,19 +20,21 @@ public class GUITest extends JFrame
     {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-        // create buttons
-        JButton aButton = new JButton();
-
-        // add button to panel
         jPanel = new JPanel();
-        jPanel.add(aButton);
 
-        // add panel to frame
+
+
+    }
+
+    public void makeButton(String name,Color backgroundColor)
+    {
+
+        JButton aButton = new JButton(name);
+        jPanel.add(aButton);
         this.add(jPanel);
 
-
         // create button actions
-        TestAction testAction = new TestAction(Color.RED);
+        TestAction testAction = new TestAction(backgroundColor);
 
         // associate actions with buttons
         aButton.addActionListener(testAction);
