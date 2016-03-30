@@ -11,6 +11,10 @@ public class MapData {
     private String name;
     private int stationTableID;
 
+    public MapData()
+    {
+
+    }
     public MapData(int id,String name,int stationTableID)
     {
         setId(id);
@@ -23,25 +27,29 @@ public class MapData {
         this.id = id;
     }
 
-    public void setStationTableID(int stationTableID) {
-        stationTableID = stationTableID;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setStationTableID(int stationTableID) {
+        stationTableID = stationTableID;
     }
 
     public int getId() {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getStationTableID() {
         return stationTableID;
     }
 
-
+    @Override
+    public String toString()
+    {
+        return id+" "+name+" "+ stationTableID;
+    }
 }
