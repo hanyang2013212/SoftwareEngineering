@@ -1,4 +1,4 @@
-package com.MAP;
+package com.MapData;
 
 import net.sf.json.*;
 

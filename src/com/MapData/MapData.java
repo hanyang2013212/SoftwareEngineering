@@ -1,6 +1,4 @@
-package com.MAP;
-
-import java.util.Map;
+package com.MapData;
 
 /**
  * Created by Evilina on 2016/3/28.

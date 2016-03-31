@@ -21,39 +21,35 @@ public class GUITest extends JFrame
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         jPanel = new JPanel();
-
+        makeButton("1",Color.black);
+        JMenuBar jMenuBar = new JMenuBar();
+        rootPane.setJMenuBar(jMenuBar);
+        JMenu editMenu = new JMenu("File");
+        jMenuBar.add(editMenu);
+        JMenuItem openItem = new JMenuItem("Open");
+        editMenu.add(openItem);
 
 
     }
 
-    public void makeButton(String name,Color backgroundColor)
+    public void makeButton(String name,final Color backgroundColor)
     {
 
         JButton aButton = new JButton(name);
         jPanel.add(aButton);
         this.add(jPanel);
 
-        // create button actions
-        TestAction testAction = new TestAction(backgroundColor);
-
         // associate actions with buttons
-        aButton.addActionListener(testAction);
+        aButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                jPanel.setBackground(backgroundColor);
+            }
+        });
     }
 
-    private class TestAction implements ActionListener
-    {
-        private Color backgroundColor;
-        public TestAction(Color c)
-        {
-            this.backgroundColor = c;
-        }
 
-
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-            jPanel.setBackground(backgroundColor);
-        }
-    }
 
 }

@@ -3,8 +3,6 @@
  */
 
 import com.GUI.GUITest;
-import com.MAP.MapData;
-import com.MAP.ReadMap;
 
 import java.awt.*;
 import javax.swing.*;
@@ -15,9 +13,9 @@ public class MainClass {
 
     public static void main(String[] args)
     {
-        MapData mapData = new MapData(0, "1", 0);
-        String a = new ReadMap().BuildJson("1", mapData);
-        new ReadMap().pareseJson(a);
+//        MapData mapData = new MapData(0, "1", 0);
+//        String a = new ReadMap().BuildJson("1", mapData);
+//        new ReadMap().pareseJson(a);
 
 
         EventQueue.invokeLater(new Runnable()
