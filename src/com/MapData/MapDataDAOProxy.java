@@ -9,7 +9,7 @@ public class MapDataDAOProxy implements MapDataDAO
 {
 
 
-    MapDataDAOProxy()
+    public MapDataDAOProxy()
     {
 
     }
@@ -19,7 +19,7 @@ public class MapDataDAOProxy implements MapDataDAO
     {
         boolean flag = false;
 
-        return false;
+        return flag;
     }
 
     @Override
@@ -39,4 +39,5 @@ public class MapDataDAOProxy implements MapDataDAO
     {
         return null;
     }
+
 }
