@@ -2,7 +2,6 @@ package com.JSON;
 
 import com.MapData.MapData;
 import net.sf.json.*;
-
 import java.io.*;
 
 /**
@@ -29,7 +28,7 @@ public class ConnectToJSON
 
         aMapData.setId(jo.getInt("id"));
         aMapData.setName(jo.getString("name"));
-        aMapData.setStationTableID(jo.getInt("stationID"));
+//        aMapData.setStationTableID(jo.getInt("stationID"));
 
         return aMapData;
     }

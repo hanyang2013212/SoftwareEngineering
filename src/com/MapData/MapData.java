@@ -1,5 +1,7 @@
 package com.MapData;
 
+import java.util.List;
+
 /**
  * Created by Evilina on 2016/3/28.
  * Stroe the map data
@@ -7,17 +9,17 @@ package com.MapData;
 public class MapData {
     private int id;
     private String name;
-    private int stationTableID;
+    private String[] station;
 
     public MapData()
     {
 
     }
-    public MapData(int id,String name,int stationTableID)
+    public MapData(int id, String name, String[] station)
     {
         setId(id);
         setName(name);
-        setStationTableID(stationTableID);
+        setStation(station);
 
     }
 
@@ -29,8 +31,9 @@ public class MapData {
         this.name = name;
     }
 
-    public void setStationTableID(int stationTableID) {
-        stationTableID = stationTableID;
+    public void setStation(String[] station)
+    {
+        this.station = station;
     }
 
     public int getId() {
@@ -41,13 +44,13 @@ public class MapData {
         return name;
     }
 
-    public int getStationTableID() {
-        return stationTableID;
+    public String[] getStation() {
+        return station;
     }
 
     @Override
     public String toString()
     {
-        return id+" "+name+" "+ stationTableID;
+        return id+" "+name+" "+station[0];
     }
 }

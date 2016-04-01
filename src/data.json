@@ -1,0 +1,20 @@
+{
+  "MapData": [
+    {
+      "id": 0,
+      "name": "Route1",
+      "station": 
+              [
+                "A","B","C","D"
+              ]
+    },
+    {
+      "id": 1,
+      "name": "Route2",
+      "station":
+              [
+                "E","F","G"
+              ]
+    }
+  ]
+}

@@ -30,14 +30,22 @@ public class ReadMap {
     public void pareseJson(String jsonString)
     {
         JSONObject jsonObject = JSONObject.fromObject(jsonString);
-        JSONArray jsonArray = jsonObject.getJSONArray("1");
+        JSONArray jsonArray = jsonObject.getJSONArray("MapData");
         List<MapData> map = new ArrayList<MapData>();
         for (int i = 0; i < jsonArray.size(); i++)
         {
             MapData aMapData = new MapData();
             aMapData.setId(jsonArray.getJSONObject(i).getInt("id"));
             aMapData.setName(jsonArray.getJSONObject(i).getString("name"));
-            aMapData.setStationTableID(jsonArray.getJSONObject(i).getInt("stationTableID"));
+
+//TBC
+            JSONArray station = jsonArray.getJSONObject(i).getJSONArray("station");
+            String[] stationName = new String[station.size()];
+            for (int j = 0; j < station.size(); j++)
+            {
+                stationName[j] = station.getString(j);
+            }
+            aMapData.setStation(stationName);
 
             map.add(aMapData);
         }
