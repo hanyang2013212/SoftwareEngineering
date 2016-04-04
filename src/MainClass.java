@@ -2,6 +2,7 @@
  * Created by Evilina on 2016/3/28.
  */
 
+import com.Controller.Controller;
 import com.JAVABean.Factory.DAOFactory;
 import com.JAVABean.MapData.MapData;
 
@@ -33,21 +34,25 @@ public class MainClass {
 //        System.out.println(DAOFactory.getMapDataInstance().findByID(0));
 
 
+//        ModelSubject modelSubject = new ModelSubject();
+//        MapDataDisplay mapDataDisplay = new MapDataDisplay(modelSubject);
+//        modelSubject.getMapDataByID(1);
+
+//不适用eventqueue封装gui事件
+//        EventQueue.invokeLater(new Runnable()
+//        {
+//            @Override
+//            public void run()
+//            {
+//                GUIView frame = new GUIView();
+//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                frame.setVisible(true);
+//            }
+//        });
+
         ModelSubject modelSubject = new ModelSubject();
-        MapDataDisplay mapDataDisplay = new MapDataDisplay(modelSubject);
-        modelSubject.getMapDataByID(1);
+        Controller controller = new Controller(modelSubject);
 
-
-        EventQueue.invokeLater(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                GUIView frame = new GUIView();
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setVisible(true);
-            }
-        });
 
 
     }

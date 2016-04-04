@@ -18,14 +18,11 @@ public class ModelSubject extends Observable
 
     public ModelSubject()
     {
-
     }
-
 
     public void setMapDataByID(int id) throws Exception
     {
     }
-
 
     public MapData getMapDataByID(int id) throws Exception
     {
@@ -35,8 +32,6 @@ public class ModelSubject extends Observable
         MapDataChanged();
         return mapData;
     }
-
-
 
 
     public void MapDataChanged()
