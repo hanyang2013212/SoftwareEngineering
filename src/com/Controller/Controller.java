@@ -1,6 +1,6 @@
 package com.Controller;
 
-import com.Model.Model;
+import com.Model.ModelSubject;
 import com.ViewGUI.GUIView;
 
 /**
@@ -9,9 +9,9 @@ import com.ViewGUI.GUIView;
 public class Controller
 {
     private GUIView guiView;
-    private Model model;
+    private ModelSubject model;
 
-    public Controller(GUIView guiView, Model model)
+    public Controller(GUIView guiView, ModelSubject model)
     {
         this.guiView = guiView;
         this.model = model;
