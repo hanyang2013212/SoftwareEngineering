@@ -1,6 +1,4 @@
-package com.MapData;
-
-import java.util.List;
+package com.JAVABean.MapData;
 
 /**
  * Created by Evilina on 2016/3/28.
@@ -51,6 +49,12 @@ public class MapData {
     @Override
     public String toString()
     {
-        return id+" "+name+" "+station[0];
+        String stationName = "";
+        for (int i = 0; i < station.length; i++)
+        {
+            stationName += station[i];
+        }
+
+        return id+" "+name+" "+stationName;
     }
 }

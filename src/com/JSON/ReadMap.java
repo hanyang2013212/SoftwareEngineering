@@ -1,5 +1,6 @@
-package com.MapData;
+package com.JSON;
 
+import com.JAVABean.MapData.MapData;
 import net.sf.json.*;
 
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class ReadMap {
         for (int i = 0; i < map.size(); i++)
         {
             MapData map2 = map.get(i);
-            System.out.println("map" +map2.toString() );
+            System.out.println("map:" +map2.toString() );
         }
 
     }

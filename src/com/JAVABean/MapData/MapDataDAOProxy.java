@@ -1,4 +1,4 @@
-package com.MapData;
+package com.JAVABean.MapData;
 
 import java.util.List;
 
@@ -7,11 +7,13 @@ import java.util.List;
  */
 public class MapDataDAOProxy implements MapDataDAO
 {
-
+    private MapDataConnection con;
+    private MapDataDAO dao = null;
 
     public MapDataDAOProxy()
     {
-
+        this.con = new MapDataConnection();
+        this.dao = new MapDataImpl(con.ReadFile());
     }
 
     @Override
@@ -31,13 +33,17 @@ public class MapDataDAOProxy implements MapDataDAO
     @Override
     public MapData findByID(int id) throws Exception
     {
-        return null;
+        MapData mapData = dao.findByID(id);
+        return mapData;
     }
 
     @Override
     public List<MapData> findAll(String keyWord) throws Exception
     {
-        return null;
+        List<MapData> list= dao.findAll("All");
+
+        return list;
+
     }
 
 }

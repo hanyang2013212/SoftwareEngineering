@@ -1,4 +1,4 @@
-package com.MapData;
+package com.JAVABean.MapData;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.JSON;
 
-import com.MapData.MapData;
+import com.JAVABean.MapData.MapData;
 import net.sf.json.*;
 import java.io.*;
 

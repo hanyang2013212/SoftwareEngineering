@@ -1,6 +1,6 @@
-package com.GUI;
+package com.ViewGUI;
 
-import com.ENUM.ColorTest;
+import com.JAVABean.MapData.MapData;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,13 +10,13 @@ import java.awt.event.ActionListener;
 /**
  * Created by Evilina on 2016/3/30.
  */
-public class GUITest extends JFrame
+public class GUIView extends JFrame
 {
     private JPanel jPanel;
     private static final int DEFAULT_WIDTH = 300;
     private static final int DEFAULT_HEIGHT = 300;
 
-    public GUITest()
+    public GUIView()
     {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
@@ -50,6 +50,10 @@ public class GUITest extends JFrame
         });
     }
 
+    public void printMapData(MapData mapData)
+    {
+
+    }
 
 
 }
