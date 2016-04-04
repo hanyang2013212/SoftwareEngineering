@@ -15,6 +15,7 @@ public class Controller
     {
         this.guiView = guiView;
         this.model = model;
+        System.out.println("");
     }
 
 }

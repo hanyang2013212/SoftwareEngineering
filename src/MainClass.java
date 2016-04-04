@@ -2,8 +2,11 @@
  * Created by Evilina on 2016/3/28.
  */
 
+import com.JAVABean.Factory.DAOFactory;
+import com.JAVABean.MapData.MapData;
+
+import com.Model.MapDataDisplay;
 import com.Model.ModelSubject;
-import com.Model.Observer;
 import com.ViewGUI.GUIView;
 
 import java.awt.*;
@@ -24,15 +27,17 @@ public class MainClass {
 //        new ReadMap().pareseJson(a);
 
         //这是抽象工厂测试代码
-//        List<MapData> list = DAOFactory.getMapDataInstance().findAll("a");
+
+//        java.util.List<MapData> list = DAOFactory.getMapDataInstance().findAll("a");
 //        System.out.println(list.get(1).toString());
 //        System.out.println(DAOFactory.getMapDataInstance().findByID(0));
 
 
-        //这是自己写的观察者模式测试代码
-//        ModelSubject modelSubject = new ModelSubject();
-//        Observer o = new Observer(modelSubject);
-//        modelSubject.getMapDataByID(1);
+        ModelSubject modelSubject = new ModelSubject();
+        MapDataDisplay mapDataDisplay = new MapDataDisplay(modelSubject);
+        modelSubject.getMapDataByID(1);
+
+
         EventQueue.invokeLater(new Runnable()
         {
             @Override
