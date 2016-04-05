@@ -33,6 +33,12 @@ public class ModelSubject extends Observable
         return mapData;
     }
 
+    public List<MapData> getAllMapData() throws Exception {
+        List<MapData> list = DAOFactory.getMapDataInstance().findAll("");
+
+        return list;
+    }
+
 
     public void MapDataChanged()
     {
